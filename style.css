@@ -57,7 +57,7 @@ img {
   height: 100px;
 }
 
-.click {
+.open {
   position: absolute;
   background-color: #e9c46a;
   width: 170px;
@@ -69,7 +69,7 @@ img {
   cursor: pointer;
 }
 
-.click:before {
+.open:before {
   content:"";
   position: absolute;
   width: 25px;
@@ -78,7 +78,7 @@ img {
   left:69px;
 }
 
-.click:after {
+.open:after {
   content:"";
   position: absolute;
   width: 5px;
@@ -92,8 +92,13 @@ img {
   top:-47px;
 }
 
-#click:checked + .click {
+#open:checked + .open {
   transform: rotate(-110deg) scaleX(0.85);
+}
+
+[type="checkbox"]{
+  width: 0;
+  height: 0;
 }
 
 .wishes {
@@ -107,11 +112,11 @@ img {
   left:5px;
 }
 
-#click:checked ~ .wishes {
+#open:checked ~ .wishes {
   transform: translateY(-100px);
   display: block;
 }
 
-#click:checked ~ .sparkles {
+#open:checked ~ .sparkles {
   display: block;
 }
